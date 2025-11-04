@@ -1,0 +1,40 @@
+{
+    "name": "dyonmulya/codeigniter4-favicons",
+    "description": "A codeigniter 4 library to auto generate favicons to your main application.",
+    "type": "library",
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "license": "MIT",
+    "keywords": [
+        "codeigniter",
+        "codeigniter4",
+        "favicons",
+        "favicon-generator"
+    ],
+    "authors": [
+        {
+            "name": "Dyo Wiranata Mulya",
+            "role": "Developer"
+        }
+    ],
+    "support": {
+        "source": "https://github.com/dyonmulya/codeigniter4-favicons",
+        "issues": "https://github.com/dyonmulya/codeigniter4-favicons/issues"
+    },
+    "require": {
+        "php": "^8.1",
+        "imagine/imagine": "^1.5"
+    },
+    "require-dev": {
+        "codeigniter4/framework": "^4.6",
+        "codeigniter4/translations": "^4.6"
+    },
+    "autoload": {
+        "psr-4": {
+            "DyonMulya\\CodeIgniter4Favicons\\": "src"
+        },
+        "exclude-from-classmap": [
+            "**/Database/Migrations/**"
+        ]
+    }
+}

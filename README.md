@@ -74,7 +74,7 @@ class App extends BaseConfig {
      * Name
      * ---------------------------------------------------
      * 
-     * Used to specify the full name of your web application as it's usually displayed to users, such as in application lists or as a label for your application's icon.
+     * Used to specify the full name of your application as it's usually displayed to users, such as in application lists or as a label for your application's icon.
      * 
      * @link https://w3c.github.io/manifest/#name-member
      * 
@@ -147,6 +147,24 @@ class App extends BaseConfig {
     public $display = 'SET_YOUR_APPLICATION_DISPLAY';
 
     /**
+     * ---------------------------------------------------
+     * Orientation
+     * ---------------------------------------------------
+     * 
+     * Used to specify the default orientation for your application. It defines how the app should be displayed when launched and during use, in relation to the device's screen orientation, particularly on devices that support multiple orientations.
+     * 
+     * The orientation value must be one of the following keywords:
+     * 'any' : Displays the web app in any orientation allowed by the device's operating system or user settings. It allows the app to rotate freely to match the orientation of the device when it is rotated.
+     * 'natural' : Displays the web app in the orientation considered most natural for the device, as determined by the browser, operating system, user settings, or the screen itself.
+     * 'portrait' : Displays the web app with height greater than width. It allows the app to switch between portrait-primary and portrait-secondary orientations when the device is rotated.
+     * 'portrait-primary' : Displays the web app in portrait mode, typically with the device held upright. This is usually the default app orientation on devices that are naturally portrait. Depending on the device and browser implementation, the app will typically maintain this orientation even when the device is rotated.
+     * 'portrait-secondary' : Displays the web app in inverted portrait mode, which is portrait-primary rotated 180 degrees. Depending on the device and browser implementation, the app will typically maintain this orientation even when the device is rotated.
+     * 'landscape' : Displays the web app with width greater than height. It allows the app to switch between landscape-primary and landscape-secondary orientations when the device is rotated.
+     * 'landscape-primary' : Displays the web app in landscape mode, typically with the device held in its standard horizontal position. This is usually the default app orientation on devices that are naturally landscape. Depending on the device and browser implementation, the app will typically maintain this orientation even when the device is rotated.
+     * 'landscape-secondary' : Displays the web app in inverted landscape mode, which is landscape-primary rotated 180 degrees. Depending on the device and browser implementation, the app will typically maintain this orientation even when the device is rotated.
+     * 
+     * @link https://w3c.github.io/manifest/#orientation-member
+     * 
      * @var \DyonMulya\CodeIgniter4Favicons\Enumerations\WebApplicationManifestOrientation | string
      */
     public $orientation = 'SET_YOUR_APPLICATION_ORIENTATION';
@@ -181,6 +199,10 @@ class App extends BaseConfig {
      * ---------------------------------------------------
      * Tile Color
      * ---------------------------------------------------
+     * 
+     * Used to specifies the RGB background color of the tile for the Original Equipment Manufacturer (OEM) or organization on the Help and Support home page.
+     * 
+     * @link https://learn.microsoft.com/en-us/windows-hardware/customize/desktop/unattend/microsoft-windows-helpandsupport-helpandsupport-tilecolor
      * 
      * @var string #hexcolor | rgb()
      */
